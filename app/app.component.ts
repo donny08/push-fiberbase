@@ -11,7 +11,6 @@ import * as Connectivity from "tns-core-modules/connectivity";
 import { DataService } from './services/index';
 import { confirm } from "ui/dialogs";
 import { messaging, Message } from "nativescript-plugin-firebase/messaging";
-const firebase = require("nativescript-plugin-firebase");
 //require("nativescript-plugin-firebase");
 
 @Component({
