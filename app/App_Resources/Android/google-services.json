@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "321204729710",
+    "firebase_url": "https://mashreq-dob-uat.firebaseio.com",
+    "project_id": "mashreq-dob-uat",
+    "storage_bucket": "mashreq-dob-uat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321204729710:android:1879dde28a6622d7",
+        "android_client_info": {
+          "package_name": "com.mashreq.dobc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321204729710-pmcanhu4ac34h61djsjivtnaikvkfc61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB87ViCclM3s8XtAB2l9fbYoChiKdOOLM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

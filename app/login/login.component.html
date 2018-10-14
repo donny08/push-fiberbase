@@ -1,0 +1,44 @@
+<FlexboxLayout class="page proxima" #login>
+	<ScrollView scrollBarIndicatorVisible="false" #ScrollLogin width="100%" height="100%" orientation="vertical" sdkExampleTitle
+	 sdkToggleNavButton>
+		<StackLayout class="form form-login" *ngIf="!otpFlag">
+
+			<StackLayout class="">
+				<Image class="logo" src="~/images/logo.png"></Image>
+				<Label class="loginheader" text="Digital On Boarding"></Label>
+				<Label style="font-size: 16;text-align: center;color:#ccc;margin-bottom: 20;" text="{{appVersion}}"></Label>
+				<!-- <Label style="font-size: 16;text-align: center;color:#ccc;margin-bottom: 20;" text="UAT 2.1.1"></Label> -->
+
+			</StackLayout>
+			<StackLayout class="logincontainer">
+				<StackLayout class="input-field">
+					<TextField #email name="email" text="border-width: 5;" class="input form-login-input" hint="Username" keyboardType="email"
+					 autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.email" returnKeyType="next" (returnPress)="focusPassword()"></TextField>
+				</StackLayout>
+				<StackLayout class="input-field">
+					<TextField #password name="password" class="input form-login-input" hint="Password" (tap)="scroll_bottom()" secure="true"
+					 [(ngModel)]="user.password" [returnKeyType]="isLoggingIn ? 'done' : 'next'"></TextField>
+				</StackLayout>
+				<Button [text]="isLoggingIn ? 'Log In' : 'Sign Up'" (tap)="submit()" class="btn-primary"></Button>
+
+
+			</StackLayout>
+		</StackLayout>
+		<StackLayout class="form form-login logincontainer" *ngIf="otpFlag">
+			<Image class="logo" src="~/images/logo.png"></Image>
+			<Label class="header" style="margin-bottom: 10;" text="Digital On-Boarding"></Label>
+			<Label style="font-size: 16;text-align: center;color:#ccc;" text="{{appVersion}}"></Label>
+			<!-- <Label style="font-size: 16;text-align: center;color:#ccc;" text="UAT 2.1.1"></Label> -->
+			<StackLayout class="input-field_otp">
+				<TextField keyboardType="number" #otp name="otp" class="input" hint="OTP" secure="true" [(ngModel)]="user.otp" (ngModelChange)="autoVerifyOTP(user.otp)"
+				 returnKeyType="done"></TextField>
+				<!-- <WrapLayout orientation="horizontal">
+					<Label text="Didn't Receive OTP?" class="label" textWrap="true"></Label>
+					<Label text="Resend OTP" (tap)="resendOTP($event)" style="margin-left:6;color:#FF9900;" class="label" textWrap="true"></Label>
+				</WrapLayout> -->
+				<Button [text]="'Verify'" (tap)="verifyOTP(user.otp)" class="btn-primary" tyle="margin-top:10;"></Button>
+			</StackLayout>
+
+		</StackLayout>
+	</ScrollView>
+</FlexboxLayout>

@@ -1,0 +1,124 @@
+.page {
+  align-items: center;
+  flex-direction: column;
+  font-family: "Avenir";
+  width: 100%;
+}
+
+.form {
+  margin-left: 30;
+  margin-right: 30;
+  flex-grow: 2;
+  width: 70%;
+  ;
+  vertical-align: middle;
+}
+
+.anim1 {
+  animation-name: bounce2;
+  animation-duration: 1.5;
+  animation-delay: .5;
+  animation-iteration-count: 1;
+  animation-timing-function: spring;
+  animation-fill-mode: forwards;
+}
+
+.logincontainer {
+  width: 300;
+}
+
+.anim2 {
+  animation-name: bounce;
+  animation-duration: 1.5;
+  animation-delay: .5;
+  animation-iteration-count: 1;
+  animation-timing-function: spring;
+  animation-fill-mode: forwards;
+}
+
+.logo {
+  margin-bottom: 12;
+  margin-right:22;
+  height: 150;
+  font-weight: bold;
+}
+
+.headertop {
+  text-align: center;
+  color: #FF9900;
+}
+
+.header {
+  font-family: "Avenir";
+  font-weight: normal;
+  font-style: normal;
+  horizontal-align: center;
+  font-size: 25px;
+  margin-bottom: 70;
+  text-align: center;
+  color: #FF9900;
+}
+
+.loginheader {
+  font-family: "Avenir";
+  font-weight: normal;
+  font-style: normal;
+  horizontal-align: center;
+  font-size: 25px;
+  margin-bottom: 5;
+  text-align: center;
+  color: #FF9900;
+}
+
+.input-field_otp {
+  margin-top: 20;
+}
+
+/* 
+.input-field {
+  margin-bottom: 5;
+}
+.form-login-input{
+  margin-bottom: 10px;
+}*/
+
+.input {
+  background-image: none;
+  border-width: 0;
+}
+
+.btn-primary {
+  height: 45;
+}
+
+.login-label {
+  horizontal-align: center;
+  color: #A8A8A8;
+  font-size: 16;
+}
+
+.sign-up-label {
+  margin-bottom: 20;
+}
+
+.bold {
+  color: #000000;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate(0, 100);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes bounce2 {
+  from {
+    transform: translate(0, -100);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}

@@ -1,0 +1,28 @@
+// Add your native dependencies here:
+
+// Uncomment to add recyclerview-v7 dependency
+dependencies {
+     compile "io.reactivex:rxjava:1.2.7"
+     compile "io.reactivex:rxandroid:1.2.1"
+     implementation 'com.google.gms:google-services:4.0.1'
+}
+
+android {  
+  lintOptions {
+    checkReleaseBuilds false
+    // Or, if you prefer, you can continue to check for errors in release builds,
+    // but continue the build even when errors are found:
+    abortOnError false
+  }
+  defaultConfig {  
+    generatedDensities = []
+    applicationId = "com.mashreq.dobc" 
+    multiDexEnabled true 
+  }  
+  aaptOptions {  
+    additionalParameters "--no-version-vectors"  
+  }
+  dexOptions {
+    javaMaxHeapSize "4g"
+  }  
+} 
